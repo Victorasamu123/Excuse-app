@@ -55,13 +55,13 @@ const Excuse = () => {
     }
   return (
             <>
-            <h1 className="text-center">Welcome to Random Excuses App</h1>
-            <h4 className="text-center mb-5">Select categories to generate random excuses</h4>
+            <h1 className="text-center text-light fs-2"><span>W</span>elcome to my<span>E</span>xcuses <span>A</span>pp</h1>
+            <h4 className="text-center mb-5 text-light">Select categories to generate random excuses</h4>
             {allExcuse.map((stu,index)=>(
                  <div className="container-fluid" key={excuse}>
                  <div className="row">
                    <div className="col-lg-7 col-md-7 mx-auto d-block col-sm-12">
-                     <div className="card p-3 mb-3">
+                     <div className="card p-3 mb-3 card-big-div text-light">
                        <div className="card-text text-center fs-3">{stu.excuse}</div>
                      </div>
                      <center>
