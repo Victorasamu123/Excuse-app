@@ -59,10 +59,15 @@ const Excuse = () => {
             {allExcuse.map((stu,index)=>(
                  <div className="container-fluid" key={excuse}>
                  <div className="row">
-                   <div className="col-7 mx-auto">
-                     <div className="card p-3">
+                   <div className="col-lg-7 col-md-7 mx-auto d-block col-sm-12">
+                     <div className="card p-3 mb-3">
                        <div className="card-text text-center fs-3">{stu.excuse}</div>
                      </div>
+                     <center>
+                     <div className="card p-1 col-lg-2 col-sm-5 col-md-2">
+                       <div className="card-text text-center fs-5">{stu.cat}</div>
+                   </div>
+                     </center>
                    </div>
                  </div>
                </div>
