@@ -3,16 +3,16 @@ import { useState } from "react"
 const Excuse = () => {
     const [allExcuse, setallExcuse] = useState([])
     const [excuse, setexcuse] = useState("")
-    const [cat, setcat] = useState(second)
+    const [cat, setcat] = useState("")
     const endpoint = "https://excuser.herokuapp.com/v1/excuse/family/"
     const fetchFamily = () => {
         axios.get(endpoint).then((result) => {
             console.log(result.data[0].excuse);
             setexcuse(result.data[0].excuse);
-            console.log(result.data)
-            // setcat(result.data[0].categor)
+            console.log(result.data[0].category)
+            setcat(result.data[0].category)
             console.log(excuse)
-            let newExcuse={excuse}
+            let newExcuse={excuse,cat}
             setallExcuse([newExcuse])
         })
     }
@@ -21,8 +21,10 @@ const Excuse = () => {
         axios.get(endpoint2).then((result) => {
             console.log(result.data[0].excuse);
             setexcuse(result.data[0].excuse);
+            console.log(result.data[0].category)
+            setcat(result.data[0].category)
             console.log(excuse)
-            let newExcuse={excuse}
+            let newExcuse={excuse,cat}
             setallExcuse([newExcuse])
         })
     }
@@ -31,8 +33,10 @@ const Excuse = () => {
         axios.get(endpoint3).then((result) => {
             console.log(result.data[0].excuse);
             setexcuse(result.data[0].excuse);
+            console.log(result.data[0].category)
+            setcat(result.data[0].category)
             console.log(excuse)
-            let newExcuse={excuse}
+            let newExcuse={excuse,cat}
             setallExcuse([newExcuse])
         })
     }
@@ -41,8 +45,10 @@ const Excuse = () => {
         axios.get(endpoint4).then((result) => {
             console.log(result.data[0].excuse);
             setexcuse(result.data[0].excuse);
+            console.log(result.data[0].category)
+            setcat(result.data[0].category)
             console.log(excuse)
-            let newExcuse={excuse}
+            let newExcuse={excuse,cat}
             setallExcuse([newExcuse])
         })
     }
