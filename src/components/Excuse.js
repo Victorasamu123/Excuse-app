@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import "./Excuse.css"
 const Excuse = () => {
     const [allExcuse, setallExcuse] = useState([])
     const [excuse, setexcuse] = useState("")
