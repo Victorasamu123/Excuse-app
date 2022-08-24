@@ -45,21 +45,27 @@ const Excuse = () => {
     }
   return (
             <>
+            <h1 className="text-center">Welcome to Random Excuses App</h1>
+            <h4 className="text-center mb-5">Select categories to generate random excuses</h4>
             {allExcuse.map((stu,index)=>(
                  <div className="container-fluid" key={excuse}>
                  <div className="row">
-                   <div className="col-7 mx-auto shadow-sm">
-                     <div className="card">
-                       <div className="card-text">{stu.excuse}</div>
+                   <div className="col-7 mx-auto">
+                     <div className="card p-3">
+                       <div className="card-text text-center fs-3">{stu.excuse}</div>
                      </div>
                    </div>
                  </div>
                </div>
             ))}
-                <button onClick={fetchFamily} className='btn btn-info me-3 d-block mb-5 mt-5'>Family category</button>
-                <button onClick={fetchOffice} className='btn btn-warning me-3 d-block mb-5 mt-5'>Office category</button>
-                <button onClick={fetchChildren} className='btn btn-primary me-3 d-block mb-5 mt-5'>Children category</button>
+            <center>
+                <div style={{marginTop:200}}>
+                <button onClick={fetchFamily} className='btn btn-info me-3 '>Family category</button>
+                <button onClick={fetchOffice} className='btn btn-warning me-3 '>Office category</button>
+                <button onClick={fetchChildren} className='btn btn-primary me-3 '>Children category</button>
                 <button onClick={fetchCollege} className='btn btn-danger me-3'>College category</button>
+                </div>
+            </center>
             </>
         )
     }
