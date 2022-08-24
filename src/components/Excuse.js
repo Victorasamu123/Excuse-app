@@ -3,11 +3,14 @@ import { useState } from "react"
 const Excuse = () => {
     const [allExcuse, setallExcuse] = useState([])
     const [excuse, setexcuse] = useState("")
+    const [cat, setcat] = useState(second)
     const endpoint = "https://excuser.herokuapp.com/v1/excuse/family/"
     const fetchFamily = () => {
         axios.get(endpoint).then((result) => {
             console.log(result.data[0].excuse);
             setexcuse(result.data[0].excuse);
+            console.log(result.data)
+            // setcat(result.data[0].categor)
             console.log(excuse)
             let newExcuse={excuse}
             setallExcuse([newExcuse])
@@ -65,10 +68,10 @@ const Excuse = () => {
             </div> */}
             <center>
                 <div style={{marginTop:200}}>
-                <button onClick={fetchFamily} className='btn btn-info me-3 '>Family category</button>
-                <button onClick={fetchOffice} className='btn btn-warning me-3 '>Office category</button>
-                <button onClick={fetchChildren} className='btn btn-primary me-3 '>Children category</button>
-                <button onClick={fetchCollege} className='btn btn-danger me-3'>College category</button>
+                <button onClick={fetchFamily} className='btn btn-info me-3 mb-3'>Family category</button>
+                <button onClick={fetchOffice} className='btn btn-warning me-3 mb-3'>Office category</button>
+                <button onClick={fetchChildren} className='btn btn-primary me-3 mb-3'>Children category</button>
+                <button onClick={fetchCollege} className='btn btn-danger me-3 mb-3'>College category</button>
                 </div>
             </center>
             </>
